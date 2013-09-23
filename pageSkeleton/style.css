@@ -1,0 +1,38 @@
+#topBar{ height:75px;
+		 width:1265px;
+		background-color:black;
+		display:block;
+		}
+
+#sideBarLeft{width:200px;
+			height:600px;
+			background-color:gray;
+			float:left;
+			}
+
+#sideBarRight{width:200px;
+			 height:600px;
+			 background-color:#555555;
+			float:left;}
+
+#mainContent{width:865px;
+			height:600px;
+			background-color:#333333;
+			float:left;
+			
+			}
+#logo{ height:100px;
+		width: 190px;
+		background-color:white;
+		margin-left:5px;
+		margin-top:5px;
+		}
+		
+h1 { margin-left: 20px;
+	}
+.content{height:200px;
+		width:190px;
+		background-color:white;
+		float:left;
+		margin-left: 20px;
+		margin-top:20px;}
