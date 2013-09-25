@@ -15,6 +15,11 @@ if(isset($_SESSION['LOGIN_STATUS']) && $_SESSION['LOGIN_STATUS'] == true) {
 <form name="logout" action="scripts/logout.php" method="POST">
 	<?php echo $_SESSION['USER_NAME']; ?> <input type="submit" value="log out">
 </form>
+Points: <?php if(isset($_SESSION['POINTS'])) {echo $_SESSION['POINTS'];} ?>
+<form name="add_points" action="scripts/add_points.php" method="POST">
+	<input type="text" name="amount">
+	<input type="submit" value="Add Points">
+</form>
 <?php
 } else {
 ?>
