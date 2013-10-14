@@ -1,0 +1,188 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<script src="webfonts.js" language="javascript" type="text/javascript"></script>
+<script src="jquery-1.9.1.min.js" language="javascript" type="text/javascript"></script>
+<script src="webjavascript.js" language="javascript" type="text/javascript"></script>
+
+<link rel="stylesheet" href="styles.css" />
+<link rel="stylesheet" href="skeleton.css" />
+<title>WordSmash</title>
+</head>
+
+<body>
+<div id="alertbox" style="display:none;">
+  <div id="login-box">
+    <p>Login Box!
+    <p> 
+  </div>
+  <div id="shop-box">
+    <p>Shop Box!
+    <p> 
+  </div>
+</div>
+<div id="bg"></div>
+<div id="header">
+  <div id="search" class="header-element">
+    <form>
+      <input id="search-bar" class="style-btn" />
+    </form>
+    <div class="style-btn"></div>
+  </div>
+  <div id="search-categories" class="style-btn">
+    <p class="tahoma txt-8pt">Search by category:</p>
+    <p class="tahoma txt-10pt">
+    <table class="tahoma txt-10pt">
+      <tr>
+        <td>Feature</td>
+        <td>Blog</td>
+      </tr>
+      <tr>
+        <td>&emsp;- Long</td>
+        <td>&emsp;- Opinion</td>
+      </tr>
+      <tr>
+        <td>&emsp;- Short</td>
+        <td>&emsp;- Column</td>
+      </tr>
+      <tr>
+        <td>&emsp;- Visual</td>
+      </tr>
+    </table>
+    <table class="tahoma txt-10pt">
+      <tr>
+        <td>Photo</td>
+        <td>Political</td>
+        <td>Music, Film & TV</td>
+      </tr>
+      <tr>
+        <td>Radio</td>
+        <td>Current Affairs</td>
+        <td>&emsp;- Features</td>
+      </tr>
+      <tr>
+        <td>Sports</td>
+        <td>Science</td>
+        <td>&emsp;- Reviews</td>
+      </tr>
+      <tr>
+        <td>Human Interest</td>
+        <td>Health</td>
+        <td>&emsp;- Interviews</td>
+      </tr>
+    </table>
+    </p>
+  </div>
+  <div id="shop" class="header-element">
+    <div class="ws-btn style-btn">
+      <p class="minion-pro txt-8pt">shop</p>
+    </div>
+  </div>
+  <div id="publish" class="header-element">
+    <div class="ws-btn style-btn">
+      <p class="minion-pro txt-8pt">publish</p>
+    </div>
+    <div id="menu-select" class=" style-btn"><img src="images/menu-arrow.gif" /></div>
+  </div>
+  <div id="login" class="header-element">
+    <p class=" lato txt-10pt style-txt">Login</p>
+    <img src="images/login-arrow.gif" />
+    <div class=" style-btn"></div>
+  </div>
+</div>
+<div style="height:25px;"></div>
+<div id="menu"> <a href="index.html"><img width="90px" src="images/logo.jpg" style="margin-left:30px;"/></a>
+  <p class="lato txt-10pt menu-txt"><a href="account.html">Account</a><br />
+    Read History<br />
+    Near you<br />
+    Top Articles<br />
+    What to read<br />
+    <br />
+    <br />
+    My Subscriptions</p>
+  <div>
+    <p class="lato-bold txt-10pt">Name<br />
+      maxeighteenletters<br />
+      Name<br />
+      Name<br />
+      Name<br />
+      Name<br />
+      Name<br />
+      Name<br />
+      Name<br />
+      Name<br />
+      Name<br />
+      Name<br />
+      Name<br />
+      Name<br />
+      Name<br />
+      Name<br />
+      Name<br />
+      Name<br />
+      Name</p>
+  </div>
+</div>
+<div id="main">
+  <p class="minion-pro txt-24pt">Publish</p>
+  <textarea id="publish-textarea"></textarea>
+  <form id="form-genre">
+    <label>
+    <p class="lato txt-12pt inline form-line">Category: </p>
+    <select>
+      <option>Blog Post</option>
+      <option>Photo</option>
+      <option>Radio</option>
+      <option>Sport</option>
+      <option>Human Interest</option>
+      <option>Politics</option>
+      <option>Current Affairs</option>
+      <option>Science</option>
+      <option>Health</option>
+      <option>Music</option>
+      <option>Film</option>
+      <option>TV</option>
+    </select>
+    </label>
+    <label>
+    <br />
+    <p class="lato txt-12pt inline form-line">Style: </p>
+    <select>
+      <option>Interview</option>
+      <option>Review</option>
+      <option>Report</option>
+      <option>Long</option>
+      <option>Short</option>
+      <option>Column</option>
+      <option>Scrap</option>
+    </select>
+    </label>
+    <br />
+  </form>
+  <div>
+    <p class="lato txt-12pt form-styleheader">Titles</p>
+    <form id="form-textstyles">
+      <input id="title1" type="button" value="Title" class="style-btn float-left minion-pro txt-12pt"/>
+      <input id="title2" type="button" value="Title" class="style-btn float-left tahoma txt-12pt" style="font-style:bold;"/>
+    </form>
+    <p class="minion-pro txt-10pt form-stylepurchase">purchase</p>
+  </div>
+  <div style="clear:both;">
+    <p class="lato txt-12pt form-styleheader">Body</p>
+    <form id="form-textstyles">
+      <input id="body1" type="button" value="Body Text" class="style-btn float-left tahoma txt-8pt"/>
+    </form>
+    <p class="minion-pro txt-10pt form-stylepurchase">purchase</p>
+  </div>
+  <div style="clear:both;">
+    <p class="lato txt-12pt form-styleheader">Font Styles</p>
+    <form id="form-textstyles">
+      <input id="style1" type="button" value="Italic" class="style-btn float-left tahoma txt-10pt" style="font-style:italic;"/>
+      <input id="style2" type="button" value="Bold" class="style-btn float-left tahoma txt-10pt" style="font-weight:bold;"/>
+    </form>
+    <p class="minion-pro txt-10pt form-stylepurchase">purchase</p>
+  </div>
+</div>
+</body>
+</html>

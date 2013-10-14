@@ -1,18 +1,31 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
 <script src="webfonts.js" language="javascript" type="text/javascript"></script>
+<script src="jquery-1.9.1.min.js" language="javascript" type="text/javascript"></script>
+<script src="webjavascript.js" language="javascript" type="text/javascript"></script>
+
 <link rel="stylesheet" href="styles.css" />
 <link rel="stylesheet" href="skeleton.css" />
 <title>WordSmash</title>
 </head>
 
 <body>
+<div id="alertbox" style="display:none;">
+  <div id="login-box">
+    <p>Login Box!</p>
+  </div>
+  <div id="shop-box">
+    <p>Shop Box!</p>
+  </div>
+</div>
+<div id="bg"></div>
 <div id="header">
   <div id="search" class="header-element">
     <form>
-      <input class="style-btn" />
+      <input id="search-bar" class="style-btn" />
     </form>
     <div class="style-btn"></div>
   </div>
@@ -22,9 +35,11 @@
     </div>
   </div>
   <div id="publish" class="header-element">
+    <a href="publish.html">
     <div class="ws-btn style-btn">
       <p class="minion-pro txt-8pt">publish</p>
     </div>
+    </a>
     <div id="menu-select" class=" style-btn"><img src="images/menu-arrow.gif" /></div>
   </div>
   <div id="login" class="header-element">
@@ -32,71 +47,148 @@
     <img src="images/login-arrow.gif" />
     <div class=" style-btn"></div>
   </div>
+  <div id="search-categories" class="style-btn">
+    <p class="tahoma txt-8pt">Search by category:</p>
+    <p class="tahoma txt-10pt">
+    <table class="tahoma txt-10pt">
+      <tr>
+        <td>Feature</td>
+        <td>Blog</td>
+      </tr>
+      <tr>
+        <td>&emsp;- Long</td>
+        <td>&emsp;- Opinion</td>
+      </tr>
+      <tr>
+        <td>&emsp;- Short</td>
+        <td>&emsp;- Column</td>
+      </tr>
+      <tr>
+        <td>&emsp;- Visual</td>
+      </tr>
+    </table>
+    <table class="tahoma txt-10pt">
+      <tr>
+        <td>Photo</td>
+        <td>Political</td>
+        <td>Music, Film &amp; TV</td>
+      </tr>
+      <tr>
+        <td>Radio</td>
+        <td>Current Affairs</td>
+        <td>&emsp;- Features</td>
+      </tr>
+      <tr>
+        <td>Sports</td>
+        <td>Science</td>
+        <td>&emsp;- Reviews</td>
+      </tr>
+      <tr>
+        <td>Human Interest</td>
+        <td>Health</td>
+        <td>&emsp;- Interviews</td>
+      </tr>
+    </table>
+    </p>
+  </div>
 </div>
-<div style="height:25px;"></div>
-<div id="menu">
-  <p class="lato txt-10pt menu-txt">Account<br />
-    Read History<br />
-    Near you<br />
-    Top Articles<br />
-    What to read<br />
-    <br />
-    <br />
-    My Subscriptions</p>
-  <div>
-    <p class="lato-bold txt-10pt">Name<br />
-      maxeighteenletters<br />
-      Name<br />
-      Name<br />
-      Name<br />
-      Name<br />
-      Name<br />
-      Name<br />
-      Name<br />
-      Name<br />
-      Name<br />
-      Name<br />
-      Name<br />
-      Name<br />
-      Name<br />
-      Name<br />
-      Name<br />
-      Name<br />
-      Name</p>
+  <div style="height:25px;"></div>
+  <div id="menu"> <img width="90px" src="images/logo.jpg" style="margin-left:30px;"/>
+    <p class="lato txt-10pt menu-txt"><a href="account.html">Account</a><br />
+      <!-- Login dialogue if not --> 
+      Read History<br />
+      Near you<br />
+      Top Articles<br />
+      What to read<br />
+      <br />
+      <br />
+      My Subscriptions</p>
+    <div>
+      <p class="lato-bold txt-10pt">Name<br />
+        maxeighteenletters<br />
+        Name<br />
+        Name<br />
+        Name<br />
+        Name<br />
+        Name<br />
+        Name<br />
+        Name<br />
+        Name<br />
+        Name<br />
+        Name<br />
+        Name<br />
+        Name<br />
+        Name<br />
+        Name<br />
+        Name<br />
+        Name<br />
+        Name</p>
+    </div>
   </div>
 </div>
 <div id="main">
   <p class="minion-pro txt-24pt">Trending</p>
   <div class="entry">
-  	<img src="images/entry.jpg" />
-    <p class="minion-pro txt-14pt">Heading</p>
-    <p class="tahoma txt-8pt">Small sentence that is taken from the first line of the article, if too much is...</p>
-  </div>
-   <div class="entry">
-  	<img src="images/entry.jpg" />
-    <p class="minion-pro txt-14pt">Heading</p>
-    <p class="tahoma txt-8pt">Small sentence that is taken from the first line of the article, if too much is...</p>
-  </div>
-   <div class="entry">
-  	<img src="images/entry.jpg" />
-    <p class="minion-pro txt-14pt">Heading</p>
-    <p class="tahoma txt-8pt">Small sentence that is taken from the first line of the article, if too much is...</p>
-  </div>
-   <div class="entry">
-  	<img src="images/entry.jpg" />
-    <p class="minion-pro txt-14pt">Heading</p>
-    <p class="tahoma txt-8pt">Small sentence that is taken from the first line of the article, if too much is...</p>
+    <div class="entry-img" style="background-image:url(images/articles/article_01.jpg);"></div>
+    <p class="minion-pro txt-14pt">Abbott backs asylum...</p>
+    <p class="tahoma txt-8pt">Tony Abbott says he is "100 per cent" committed to his asylum policies as he...</p>
   </div>
   <div class="entry">
-  	<img src="images/entry.jpg" />
-    <p class="minion-pro txt-14pt">Heading</p>
-    <p class="tahoma txt-8pt">Small sentence that is taken from the first line of the article, if too much is...</p>
+    <div class="entry-img" style="background-image:url(images/articles/article_02.jpg);"></div>
+    <p class="minion-pro txt-14pt">Greenpeace activist...</p>
+    <p class="tahoma txt-8pt">Eight Greenpeace activists have been jailed in Russia for two months, with...</p>
   </div>
   <div class="entry">
-  	<img src="images/entry.jpg" />
-    <p class="minion-pro txt-14pt">Heading</p>
-    <p class="tahoma txt-8pt">Small sentence that is taken from the first line of the article, if too much is...</p>
+    <div class="entry-img" style="background-image:url(images/articles/article_03.jpg);"></div>
+    <p class="minion-pro txt-14pt">US government faces...</p>
+    <p class="tahoma txt-8pt">The US government is facing a partial shut-down unless Republicans and...</p>
+  </div>
+  <div class="entry">
+    <div class="entry-img" style="background-image:url(images/articles/article_04.jpg);"></div>
+    <p class="minion-pro txt-14pt">Rare violence in...</p>
+    <p class="tahoma txt-8pt">The commonly stable town of Irbil in Iraq’s autonomous province of...</p>
+  </div>
+  <div class="entry">
+    <div class="entry-img" style="background-image:url(images/articles/article_05.jpg);"></div>
+    <p class="minion-pro txt-14pt">Coal-seam gas...</p>
+    <p class="tahoma txt-8pt">Small-time coal seam gas companies with little financial backing and little...</p>
+  </div>
+  <div class="entry">
+    <div class="entry-img" style="background-image:url(images/articles/article_06.jpg);"></div>
+    <p class="minion-pro txt-14pt">Water content...</p>
+    <p class="tahoma txt-8pt">NASA exploration of soil on Mars has found traces of water and other...</p>
+  </div>
+  <div class="entry">
+    <div class="entry-img" style="background-image:url(images/articles/article_07.jpg);"></div>
+    <p class="minion-pro txt-14pt">Israel arrests...</p>
+    <p class="tahoma txt-8pt">Israel’s domestic service has arrested a Belgian citizen of Iranian origin...</p>
+  </div>
+  <div class="entry">
+    <div class="entry-img" style="background-image:url(images/articles/article_08.jpg);"></div>
+    <p class="minion-pro txt-14pt">Brisbane celebrates...</p>
+    <p class="tahoma txt-8pt">Organisers of this year’s Riverfire have heralded Saturday night’s fireworks...</p>
+  </div>
+  <div class="entry">
+    <div class="entry-img" style="background-image:url(images/articles/article_09.jpg);"></div>
+    <p class="minion-pro txt-14pt">Recount for Fairfax...</p>
+    <p class="tahoma txt-8pt">Its been over three weeks since the federal election and seat of Fairfax...</p>
+  </div>
+  <div class="entry">
+    <div class="entry-img" style="background-image:url(images/articles/article_10.jpg);"></div>
+    <p class="minion-pro txt-14pt">QLD farmers given...</p>
+    <p class="tahoma txt-8pt">Farmers in Queensland’s drought affected areas will be given a grant to help...</p>
+  </div>
+  <div class="entry">
+    <div class="entry-img" style="background-image:url(images/articles/article_11.jpg);"></div>
+    <p class="minion-pro txt-14pt">QLD tough, new bikie...</p>
+    <p class="tahoma txt-8pt">Queensland could be home to the toughest bikie gang laws in the world...</p>
+  </div>
+  <div class="entry">
+    <div class="entry-img" style="background-image:url(images/articles/article_12.jpg);"></div>
+    <p class="minion-pro txt-14pt">Gold Coast Uni...</p>
+    <p class="tahoma txt-8pt">The Gold Coast University Hospital is finally open to patients with the transfers...</p>
   </div>
 </div>
+<div id="footer"></div>
 </body>
 </html>
