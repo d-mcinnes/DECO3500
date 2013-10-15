@@ -1,3 +1,5 @@
+var currency_amount = 0;
+
 $.urlParam = function(name){
     var results = new RegExp('[\\?&]' + name + '=([^&#]*)').exec(window.location.href);
     if (results==null){
@@ -6,6 +8,32 @@ $.urlParam = function(name){
     else{
        return results[1] || 0;
     }
+}
+
+function setCurrencyCookie(value, exdays) {
+	var exdate = new Date();
+	exdate.setDate(exdate.getDate() + exdays);
+	var c_value = escape(value) + ((exdays==null) ? "" : "; expires=" + exdate.toUTCString());
+	document.cookie = "deco3500currencyamount" + "=" + c_value;
+}
+
+function getCurrencyCookie() {
+	var c_value = document.cookie;
+	var c_start = c_value.indexOf(" " + "deco3500currencyamount" + "=");
+	if (c_start == -1) {
+		c_start = c_value.indexOf("deco3500currencyamount" + "=");
+	}
+	if (c_start == -1) {
+		c_value = null;
+	} else {
+		c_start = c_value.indexOf("=", c_start) + 1;
+		var c_end = c_value.indexOf(";", c_start);
+		if (c_end == -1) {
+			c_end = c_value.length;
+		}
+	c_value = unescape(c_value.substring(c_start,c_end));
+	}
+	return c_value;
 }
 
 $(function(){
@@ -18,7 +46,14 @@ $(function(){
 		console.log("EXECUTED!");
 	}
 	
+	currency_amount = getCurrencyCookie();
+	if(currency_amount == "" || currency_amount == null) {
+		currency_amount = 80;
+		setCurrencyCookie(currency_amount, 1);
+	}
+	
 	$("#user-name").text(username);
+	$("#currency_amount").html(currency_amount);
 	
 	$(".accountArticles").css('cursor','pointer');
 	
@@ -144,6 +179,21 @@ $(function(){
     	if ( e.keyCode === 13 ) { // 13 is enter key
         	loginFormSubmit()
     	}
+	});
+	
+	$(".shop-box-buy").click(function(e) {
+		if(confirm("Are you sure you want to buy with item for " + $('#' + e.target.id).data("amount") + " coins")) {
+			var amount = $('#' + e.target.id).data("amount");
+			if((currency_amount - amount) < 0) {
+				alert("Not enough coins.");
+				return;
+			}
+			currency_amount -= amount;
+			setCurrencyCookie(currency_amount, 1);
+			$("#currency_amount").html(currency_amount);
+		} else {
+			
+		}
 	});
 	
 	function loginFormSubmit(){

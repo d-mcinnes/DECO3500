@@ -14,9 +14,12 @@
 
 <body>
 <div id="alertbox" style="display:none;">
-  <div id="shop-box">
-    <p>Shop Box!
-    <p> 
+  <div id="shop-box" style="color:white;">
+    <p><h2 style="padding-bottom:15px;">Shop</h2></p>
+	<div style="padding:5px;">Item #1  <input id="store-item1" class="shop-box-buy" data-amount="5" type="submit" value="Buy (5 Coins)"></div>
+	<div style="padding:5px;">Item #2  <input id="store-item2" class="shop-box-buy" data-amount="20" type="submit" value="Buy (20 Coins)"></div>
+	<div style="padding:5px;">Item #3  <input id="store-item3" class="shop-box-buy" data-amount="10" type="submit" value="Buy (10 Coins)"></div>
+	<div style="padding:5px;">Item #4  <input id="store-item4" class="shop-box-buy" data-amount="15" type="submit" value="Buy (15 Coins)"></div>
   </div>
 </div>
 <div id="bg"></div>
@@ -135,7 +138,7 @@
   </div>
   </a>
   <img src="images/coin.png" class="the-coin currency"/>
-  <p class="lato-bold txt-24pt inline currency-number">72</p>
+  <p id="currency_amount" class="lato-bold txt-24pt inline currency-number">72</p>
 </div>
 <div id="category">
   <p class="lato txt-12p accountComments category-selected"><a>Comments Received</a></p
