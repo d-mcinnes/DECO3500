@@ -285,6 +285,27 @@ body {
 #login-box, #shop-box {
 	display: none;
 }
+#login-username, #login-password{
+	width:400px;
+	height:40px;
+	border:solid 1px #EEE;
+	border-radius:6px;
+	margin-top:10px;
+}
+#login-submit {
+	width:80px;
+	height:40px;
+	border:solid 1px #EEE;
+	border-radius:6px;
+	margin:10px 0px 0px 320px;
+	text-align:center;
+}
+#login-passwordalert {
+	position:absolute;
+	margin-top:-40px;
+	color:#FF4242!important;
+	display:none;
+}
 /**//**//*   ARTICLE *//**//**/
 
 .form-line {
@@ -334,4 +355,7 @@ body {
 	resize:none;
 	font-weight:normal;
 	font-style:normal;
+}
+#user-name {
+	text-transform:capitalize;
 }
